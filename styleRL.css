@@ -1,0 +1,114 @@
+@import url('http://fonts.googleapis.com/ccs? family=Open+Sans:400,500&display=swap');
+:root{
+
+    --black: #1B1722;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    background: url(img/20.jpg) no-repeat center;
+    background-size: cover;
+    /*background-color: #e9dae4;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+.login-Container{
+background-color:#e5d8e3fc;
+/*background: url(img/3new.jpg);*/
+background-size: cover;
+border-radius: 30px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+width:500px;
+max-width: 100%;
+overflow: hidden;
+}
+.login-header{
+    background-color: #b87aa1;
+    border-bottom: 1px solid #d8bed0; /*border around header*/
+    padding: 20px 40px;
+    text-align: center;
+    
+}
+.login-header h2{
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    color:var(--black);
+   
+}
+
+.form-control{
+    margin-bottom: 10px;/*gap between text lines*/
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 20px;
+    position: relative;
+    font-weight: bold;
+    
+    
+}
+
+.form-control lable{
+    display: inline-block;
+    margin-bottom: 5px; /*gap between each text line and box(lable) lines*/
+    
+}
+
+.form-control input{
+    border: 2px solid #F0F0F0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 80%;
+}
+/*.form-control i{
+
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left:0;
+}*/
+.form button{
+    background-color: #b87aa1;
+    border: 2px solid #b87aa1;
+    border-radius: 4px;
+    color: var(--black);
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    width: 50%;
+   
+}
+.form button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.form p{
+    font-size: 1.1rem;
+    line-height: 1rem;
+    color: var(--black);
+    padding-top: 10px;
+    padding-left: 120px;
+    font-weight: bold;
+}
+

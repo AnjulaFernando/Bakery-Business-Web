@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Order page</title>
+    <link rel="stylesheet" type="text/css" href="Order.css" />
+    <script type="text/javascript">
+        function mouseOver() {
+            document.pic.src = "img/offer.png";
+
+        }
+
+		function mouseOut() {
+            document.pic.src = "img/orderr.png";
+
+        }
+
+
+        //------------------------------------------------------------------------------------
+       function validateName() {
+
+            //ad the value that user has given
+            var fname = document.getElementById("name").value;
+            //check whether the value is exists or not
+            if (fname == "" || fname == null) {
+                alert("please enter full name");
+                return false;
+
+            }
+            //	alert("done");
+            return true;
+        }
+//----------------------------------------------------------------------------------------------------
+		function validateAddress() {
+
+//ad the value that user has given
+var add = document.getElementById("adress").value;
+//check whether the value is exists or not
+if (add== "" || add == null) {
+	alert("please enter Address");
+	return false;
+
+}
+//	alert("done");
+return true;
+}
+ //----------------------------------------------------------------------------------------------------
+
+ function validateNumber() { 
+            var numbers = /^[0-9]+$/; 
+            var phone = document.getElementById("txtContact").value; 
+ 
+            if (phone.length == 10) { 
+                if (phone.match(numbers)) { 
+                    //alert("All good"); 
+                    return true; 
+                } 
+                alert("Phone number should only consist with digits"); 
+                return false; 
+            } 
+            alert("Invalid Phone Number"); 
+            return false; 
+        }
+ //-----------------------------------------------------------------------------------------------------       
+function validate(){
+
+if (validateName() && validateAddress() && validateNumber() ){
+	alert("success");
+}else{
+	alert("failed");
+}
+}	
+        //--------------------------------------------------------------------------------------
+        
+    </script>
+</head>
+			<body>
+		<div class="Container">
+			<div class="login-header">
+				<h2>Order Now</h2>
+			</div>
+			<form action="" class="form" id="form">
+				<div class="form-control">
+					<lable>Name</lable>
+					<input type="textname" name="txtname" id="name" required />
+				</div>
+
+				<div class="form-control">
+					<lable>Email</lable>
+					<input
+						type="text"
+						name="txtname"
+						id="EmailAddress"
+						required
+					/>
+				</div>
+
+				<div class="form-control">
+					<lable>What is the bakery item you want you order</lable>
+					<select name="select2" id="select2" required>
+						<option value="Bakery Item" selected="selected">
+							Snacks
+						</option>
+						<option value="Cake">Cake</option>
+					</select>
+				</div>
+
+				<div class="form-control">
+					<lable> Date you wish to receive the order</lable>
+					<input type="date" name="txtDate" id="txtDate" />
+				</div>
+
+				<div class="form-control">
+					<lable for="txtRageNum">Quantity</lable>
+					<input
+						type="number"
+						name="txtRange"
+						id="txtRange"
+						min="1"
+						max="20"
+					/>
+				</div>
+
+
+				<div class="form-control">
+					<lable>Contact Number</lable>
+					<input type="text" name="txtContact" id="txtContact" />
+				</div>
+
+				<div class="form-control">
+					<lable>Deliver Address</lable>
+					<textarea name="textarea" id="adress"></textarea>
+				</div>
+
+				<div class="form-control">
+					<lable>Payment method</lable>
+					<select name="select" id="select">
+						<option value="Debit card">Debit card</option>
+						<option value="Credit card">Credit card</option>
+						<option value="Cash on delivery" selected="selected">
+							Cash on delivery
+						</option>
+					</select>
+				</div>
+
+				<div class="form-control">
+					<lable>Should your item be customized?</lable>
+					<div class="radio-group">
+						<input
+							name="radioOption"
+							type="radio"
+							id="radioOption_2"
+							value="Yes"
+						/>
+						Yes
+						<input
+							name="radioOption"
+							type="radio"
+							id="radioOption_3"
+							value="No"
+						/>
+						No
+					</div>
+				</div>
+
+				<div class="form-control">
+					<lable>send us a picture of it</lable>
+					<input type="file" id="img" name="img" multiple />
+				</div>
+				<div class="form-control">
+					<lable>Save card details</lable>
+				</div>
+
+				<button input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" onClick="validate()"/>
+				Submit</button>
+				<img src="orderr.png" width="200" height="200" alt="" name="pic" onMouseOver="mouseOver()" onMouseOut="mouseOut()" />
+				<p>Go back to <a href="home.html">Home</a></p>
+			</form>
+		</div>
+	</body>
+</html>
